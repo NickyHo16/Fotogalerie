@@ -1,0 +1,278 @@
+body {
+    font-family: 'Dancing Script', cursive;
+    margin: 0;
+}
+
+/*overlay start*/
+.overlay {
+    position: fixed;
+    /* Sit on top of the page content */
+    /*display: none;*/
+    /* Hidden by default */
+    width: 100%;
+    /* Full width (cover the whole page) */
+    height: 100%;
+    /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black background with opacity */
+    z-index: 2;
+    /* Specify a stack order in case you're using a different order for other elements */
+    cursor: pointer;
+    /* Add a pointer on hover */
+    display: flex;
+    /*justify-content: center !important;
+    align-items: center !important;*/
+
+}
+
+
+
+.d-none {
+    display: none;
+}
+
+#text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 50px;
+    color: white;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.bigImg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.cross-circle {
+    width: 50px;
+    height: auto;
+    padding: 25px;
+    cursor: pointer;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.anglebox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 43vh;
+    width: 100%;
+
+}
+
+.angle-left {
+    width: 50px;
+    height: auto;
+    padding: 25px;
+    cursor: pointer;
+    z-index: 1;
+    position: sticky;
+    display: flex;
+    align-items: center;
+
+
+}
+
+.angle-right {
+    width: 50px;
+    height: auto;
+    padding: 25px;
+    cursor: pointer;
+    z-index: 1;
+    position: sticky;
+    display: flex;
+    align-items: center;
+
+
+}
+
+/*overlay end*/
+
+/*header-start*/
+.header {
+    background-color: rgb(151, 171, 14);
+    height: 150px;
+    font-size: 150px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.leaficon {
+    height: 100px;
+}
+
+/*header-end*/
+
+
+/*content-start*/
+.pictureContent {
+    background-color: rgb(106, 123, 9);
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px;
+
+}
+
+.imgbox {
+    height: 200px;
+    margin: 2px;
+    padding: 2px;
+    /*position: relative;*/
+    object-fit: cover;
+    display: flex;
+    transition: transform .2s;
+    /* Animation */
+    flex: 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.imgbox img {
+    display: flex;
+    flex-wrap: wrap;
+    object-fit: cover;
+    height: 200px;
+    flex: inherit;
+}
+
+.imgbox:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    background-color: black;
+    transform: scale(1.5);
+    /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+
+/*.checkmark {
+    width: 2px;
+    height: auto;
+    display: flex;
+    color: white;
+    background-color: white;
+}*/
+
+/*.check {
+    width: 15px;
+    height: auto;
+    position: absolute;
+    opacity: 0;
+    /*display: none;*/
+/*
+}
+
+/*
+.check:hover {
+    opacity: 1;
+
+}*/
+
+.check {
+    display: none;
+}
+
+#check img {
+    width: 15px;
+    padding: 5px;
+    height: auto;
+    position: absolute;
+    /*opacity: 0;*/
+    /*display: none;*/
+
+}
+
+.imgbox:hover #check img {
+    display: flex;
+}
+
+
+
+
+
+
+
+
+/*content-end*/
+
+/*footer-start*/
+
+.footer {
+    background-color: rgb(151, 171, 14);
+    height: 50px;
+    text-align: center;
+    font-size: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+/*footer-end*/
+
+
+/*responsive mobile*/
+
+@media(max-width:900px) {
+    .imgbox:hover {
+        opacity: 0.8;
+        cursor: pointer;
+        background-color: black;
+        transform: scale(1.1);
+        /*(110% zoom-note: if the zoom is too large, it will go outside of the viewport)*/
+
+    }
+}
+
+@media (max-width:550px) {
+    .header {
+        font-size: 90px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        height: 100px;
+    }
+
+    .leaficon {
+        height: 55px;
+        width: auto;
+    }
+
+}
+
+@media (max-width:380px) {
+    .imgbox img {
+        width: 230px;
+    }
+
+    .header {
+        font-size: 50px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        height: 55px;
+    }
+
+    .leaficon {
+        height: 35px;
+        width: auto;
+    }
+
+    .footer {
+        font-size: 22px;
+    }
+
+}
